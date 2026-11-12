@@ -1,4 +1,4 @@
-const CACHE_NAME = 'meu-treino-v1';
+const CACHE_NAME = 'meu-treino-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -32,10 +32,23 @@ self.addEventListener('activate', (e) => {
   self.clients.claim();
 });
 
+// Estratégia Network-First: busca versão mais recente na rede; se offline, usa o cache
 self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then((res) => {
-      return res || fetch(e.request);
-    }).catch(() => caches.match('./index.html'))
+    fetch(e.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(e.request, responseToCache);
+          });
+        }
+        return networkResponse;
+      })
+      .catch(() => {
+        return caches.match(e.request).then((cachedResponse) => {
+          return cachedResponse || caches.match('./index.html');
+        });
+      })
   );
 });
