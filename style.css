@@ -1067,3 +1067,20 @@ nav.bottom-nav {
   align-items: center;
   gap: 6px;
 }
+
+/* Ajuste para Imagens Anatômicas Reais nos Cards */
+.exercise-thumb img.exercise-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.modal-img-container img.modal-exercise-img {
+  max-height: 200px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+}

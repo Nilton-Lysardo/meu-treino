@@ -1082,6 +1082,23 @@ nav.bottom-nav {
   gap: 6px;
 }
 
+/* Ajuste para Imagens Anatômicas Reais nos Cards */
+.exercise-thumb img.exercise-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.modal-img-container img.modal-exercise-img {
+  max-height: 200px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+}
+
 </style>
 </head>
 <body>
@@ -1956,7 +1973,8 @@ function renderExerciseList() {
       <div class="exercise-card ${isCompleted ? 'completed' : ''}" id="card-${ex.id}">
         <div class="exercise-header">
           <div class="exercise-thumb" onclick="openExerciseModal('${ex.id}')" title="Toque para ampliar e ver a técnica">
-            ${svgIcon}
+            <img src="images/${ex.id}.png" class="exercise-img" alt="${ex.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display:none; width:100%; height:100%;">${svgIcon}</div>
             <span class="exercise-thumb-zoom">🔍 Zoom</span>
           </div>
           <div class="exercise-info">
@@ -2313,7 +2331,9 @@ function openExerciseModal(id) {
   const modalDesc = document.getElementById('modal-desc');
 
   modalTitle.innerText = ex.name;
-  modalImg.innerHTML = SVG_ICONS[ex.iconKey] || SVG_ICONS['generic_gym'];
+  modalImg.innerHTML = `
+    <img src="images/${ex.id}.png" class="modal-exercise-img" alt="${ex.name}" onerror="this.parentElement.innerHTML=\`${(SVG_ICONS[ex.iconKey] || SVG_ICONS['generic_gym']).replace(/`/g, '\\`')}\`">
+  `;
   modalDesc.innerHTML = `
     <div style="margin-bottom:12px;">
       <span class="badge badge-orange">${ex.group}</span>

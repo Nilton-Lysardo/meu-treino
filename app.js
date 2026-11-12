@@ -450,7 +450,8 @@ function renderExerciseList() {
       <div class="exercise-card ${isCompleted ? 'completed' : ''}" id="card-${ex.id}">
         <div class="exercise-header">
           <div class="exercise-thumb" onclick="openExerciseModal('${ex.id}')" title="Toque para ampliar e ver a técnica">
-            ${svgIcon}
+            <img src="images/${ex.id}.png" class="exercise-img" alt="${ex.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display:none; width:100%; height:100%;">${svgIcon}</div>
             <span class="exercise-thumb-zoom">🔍 Zoom</span>
           </div>
           <div class="exercise-info">
@@ -807,7 +808,9 @@ function openExerciseModal(id) {
   const modalDesc = document.getElementById('modal-desc');
 
   modalTitle.innerText = ex.name;
-  modalImg.innerHTML = SVG_ICONS[ex.iconKey] || SVG_ICONS['generic_gym'];
+  modalImg.innerHTML = `
+    <img src="images/${ex.id}.png" class="modal-exercise-img" alt="${ex.name}" onerror="this.parentElement.innerHTML=\`${(SVG_ICONS[ex.iconKey] || SVG_ICONS['generic_gym']).replace(/`/g, '\\`')}\`">
+  `;
   modalDesc.innerHTML = `
     <div style="margin-bottom:12px;">
       <span class="badge badge-orange">${ex.group}</span>
