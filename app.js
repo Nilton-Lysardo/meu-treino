@@ -320,6 +320,22 @@ const SVG_ICONS = {
       <circle cx="100" cy="40" r="8" fill="#FF6B00"/>
       <text x="100" y="24" fill="#94A3B8" font-size="11" font-weight="bold" text-anchor="middle">EXERCÍCIO PERSONALIZADO</text>
       <text x="100" y="150" fill="#FF6B00" font-size="9" font-weight="bold" text-anchor="middle">Hipertrofia & Força</text>
+    </svg>`,
+
+  // Abdução Horizontal de Ombro na Polia
+  abducao_horizontal_ombro_polia: `
+    <svg viewBox="0 0 200 160" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="200" height="160" fill="#141820" rx="10"/>
+      <circle cx="100" cy="38" r="8" fill="#F8FAFC"/>
+      <rect x="94" y="48" width="12" height="48" rx="3" fill="#334155"/>
+      <circle cx="88" cy="50" r="5" fill="#FF6B00"/>
+      <circle cx="112" cy="50" r="5" fill="#FF6B00"/>
+      <line x1="88" y1="50" x2="40" y2="50" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+      <line x1="112" y1="50" x2="160" y2="50" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+      <line x1="40" y1="50" x2="160" y2="120" stroke="#00D2FF" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <line x1="160" y1="50" x2="40" y2="120" stroke="#00D2FF" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <text x="100" y="20" fill="#94A3B8" font-size="10" font-weight="bold" text-anchor="middle">ABDUÇÃO HORIZONTAL NA POLIA</text>
+      <text x="100" y="150" fill="#FF6B00" font-size="9" font-weight="bold" text-anchor="middle">Deltoide Posterior + Costas</text>
     </svg>`
 };
 
@@ -345,6 +361,7 @@ const DEFAULT_EXERCISES = [
   { id: "high_pulley_ombros", name: "High Pulley Ombros Máquina", category: "B", group: "Ombros e Trapézio", defaultWeight: "42 kg", sets: "3 séries de 12 reps", iconKey: "shoulder_press", isNew: false, tip: "Puxada alta para trapézio e postura ereta.", caution: "Cadência sem pressa." },
   { id: "biceps_barra", name: "Bíceps Barra (Rosca Direta)", category: "B", group: "Bíceps", defaultWeight: "5 kg cada lado", sets: "3 a 4 séries de 10 a 12 reps", iconKey: "biceps_curl", isNew: false, tip: "Cotovelos parados ao lado do corpo.", caution: "Não balance as costas." },
   { id: "hammer_curl", name: "Rosca Martelo com Halteres", category: "B", group: "Bíceps e Antebraço", defaultWeight: "6 a 8 kg cada halter", sets: "3 séries de 10 a 12 reps", iconKey: "hammer_curl", isNew: true, tip: "Palmas viradas para dentro, constrói braquial e braço espesso.", caution: "Faça sentado com apoio para conforto." },
+  { id: "abducao_horizontal_ombro_polia", name: "Abdução Horizontal de Ombro na Polia", category: "B", group: "Ombros (Posterior) & Costas", defaultWeight: "10 a 15 kg", sets: "3 séries de 12 a 15 reps", iconKey: "abducao_horizontal_ombro_polia", isNew: true, tip: "Ajuste as polias na altura do peito/ombro com cabos cruzados. Puxe abrindo os braços para trás na horizontal, esmagando o deltoide posterior e escápulas.", caution: "Mantenha os cotovelos levemente flexionados e travados sem tranco na lombar." },
 
   // TREINO C
   { id: "leg_press", name: "Leg Press 45° ou Horizontal", category: "C", group: "Pernas (Adaptado)", defaultWeight: "26 kg", sets: "3 séries de 10 a 12 reps", iconKey: "leg_press", isNew: false, tip: "Apoie os dois pés firmes. Desça até ~90° sem desgrudar a lombar.", caution: "Nunca estenda totalmente os joelhos (não trave no topo)." },
@@ -377,11 +394,35 @@ let appState = {
   }
 };
 
-// 4. CARREGAR E SALVAR DADOS NO LOCALSTORAGE
+// 4. IDENTIFICADOR INTELIGENTE DE IMAGENS DOS EXERCÍCIOS
+function getExerciseImagePath(ex) {
+  if (ex.id === 'abducao_horizontal_ombro_polia' || ex.iconKey === 'abducao_horizontal_ombro_polia') {
+    return 'images/abducao_horizontal_ombro_polia.png';
+  }
+  const norm = (ex.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  if ((norm.includes('abduc') || norm.includes('abert')) && (norm.includes('horizontal') || norm.includes('polia') || norm.includes('ombro'))) {
+    return 'images/abducao_horizontal_ombro_polia.png';
+  }
+  return `images/${ex.id}.png`;
+}
+
+// 5. CARREGAR E SALVAR DADOS NO LOCALSTORAGE
 function loadFromStorage() {
   const savedExercises = localStorage.getItem('gym_exercises');
   if (savedExercises) {
     appState.exercises = JSON.parse(savedExercises);
+    // Garantir que o exercício de abdução horizontal na polia exista se não foi adicionado ainda
+    const hasAbducao = appState.exercises.some(e => {
+      const n = (e.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      return n.includes('abduc') && n.includes('horizontal');
+    });
+    if (!hasAbducao) {
+      const defaultAbducao = DEFAULT_EXERCISES.find(e => e.id === 'abducao_horizontal_ombro_polia');
+      if (defaultAbducao) {
+        appState.exercises.push(defaultAbducao);
+        saveToStorage('gym_exercises', appState.exercises);
+      }
+    }
   } else {
     appState.exercises = DEFAULT_EXERCISES;
     saveToStorage('gym_exercises', appState.exercises);
@@ -446,11 +487,12 @@ function renderExerciseList() {
     const currentWeight = appState.customWeights[ex.id] || ex.defaultWeight;
     const svgIcon = SVG_ICONS[ex.iconKey] || SVG_ICONS['generic_gym'];
 
+    const imagePath = getExerciseImagePath(ex);
     html += `
       <div class="exercise-card ${isCompleted ? 'completed' : ''}" id="card-${ex.id}">
         <div class="exercise-header">
           <div class="exercise-thumb" onclick="openExerciseModal('${ex.id}')" title="Toque para ampliar e ver a técnica">
-            <img src="images/${ex.id}.png" class="exercise-img" alt="${ex.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <img src="${imagePath}" class="exercise-img" alt="${ex.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div style="display:none; width:100%; height:100%;">${svgIcon}</div>
             <span class="exercise-thumb-zoom">🔍 Zoom</span>
           </div>
@@ -807,9 +849,10 @@ function openExerciseModal(id) {
   const modalTitle = document.getElementById('modal-title');
   const modalDesc = document.getElementById('modal-desc');
 
+  const imagePath = getExerciseImagePath(ex);
   modalTitle.innerText = ex.name;
   modalImg.innerHTML = `
-    <img src="images/${ex.id}.png" class="modal-exercise-img" alt="${ex.name}" onerror="this.parentElement.innerHTML=\`${(SVG_ICONS[ex.iconKey] || SVG_ICONS['generic_gym']).replace(/`/g, '\\`')}\`">
+    <img src="${imagePath}" class="modal-exercise-img" alt="${ex.name}" onerror="this.parentElement.innerHTML=\`${(SVG_ICONS[ex.iconKey] || SVG_ICONS['generic_gym']).replace(/`/g, '\\`')}\`">
   `;
   modalDesc.innerHTML = `
     <div style="margin-bottom:12px;">

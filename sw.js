@@ -1,9 +1,9 @@
-const CACHE_NAME = 'meu-treino-v3';
+const CACHE_NAME = 'meu-treino-v4';
 const ASSETS = [
   './',
   './index.html',
-  './style.css?v=3',
-  './app.js?v=3',
+  './style.css?v=4',
+  './app.js?v=4',
   './manifest.json',
   './icon.svg',
   './images/supino.png',
@@ -28,7 +28,8 @@ const ASSETS = [
   './images/leg_curl.png',
   './images/abductor.png',
   './images/calf_raise.png',
-  './images/abs_machine.png'
+  './images/abs_machine.png',
+  './images/abducao_horizontal_ombro_polia.png'
 ];
 
 self.addEventListener('install', (e) => {
