@@ -2,8 +2,8 @@ const CACHE_NAME = 'meu-treino-v5';
 const ASSETS = [
   './',
   './index.html',
-  './style.css?v=5',
-  './app.js?v=5',
+  './style.css?v=6',
+  './app.js?v=6',
   './manifest.json',
   './icon.svg',
   './images/abducao_horizontal_ombro_polia.png',
