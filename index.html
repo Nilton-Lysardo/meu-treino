@@ -1,9 +1,9 @@
-Ôªø<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Meu Treino & Dieta - Personaliz√°vel</title>
+  <title>Meu Treino & Dieta - Personaliz·vel</title>
   
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0F1216">
@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -23,14 +23,14 @@
       </div>
       <div class="brand-title">
         <h1>Meu Treino & Dieta</h1>
-        <span>100% Personaliz√°vel</span>
+        <span>100% Personaliz·vel</span>
       </div>
     </div>
     <div class="header-actions">
       <button class="btn-icon" onclick="openGoalsModal()" title="Personalizar minhas metas e objetivos">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
       </button>
-      <button class="btn-icon" onclick="resetWorkoutCheckmarks()" title="Reiniciar checklist de exerc√≠cios de hoje">
+      <button class="btn-icon" onclick="resetWorkoutCheckmarks()" title="Reiniciar checklist de exercÌcios de hoje">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
       </button>
     </div>
@@ -43,23 +43,27 @@
     <!-- ========================================== -->
     <section id="view-workouts" class="view-section active">
       
-      <!-- Seletor de Treinos (A, B, C, D, Todos) -->
+      <!-- Seletor de Treinos (A, B, C, D, E, Todos) -->
       <div class="workout-selector">
         <button class="workout-tab-btn active" data-category="A" onclick="switchWorkoutTab('A')">
           <span class="tab-tag">Treino A</span>
-          <span class="tab-desc">Peito / Ombro / Tr√≠ceps</span>
+          <span class="tab-desc">Peito & TrÌceps</span>
         </button>
         <button class="workout-tab-btn" data-category="B" onclick="switchWorkoutTab('B')">
           <span class="tab-tag">Treino B</span>
-          <span class="tab-desc">Costas / B√≠ceps</span>
+          <span class="tab-desc">Costas & Puxadas</span>
         </button>
         <button class="workout-tab-btn" data-category="C" onclick="switchWorkoutTab('C')">
           <span class="tab-tag">Treino C</span>
-          <span class="tab-desc">Pernas (Adaptado) / Core</span>
+          <span class="tab-desc">Pernas (Adaptado) & Core</span>
         </button>
         <button class="workout-tab-btn" data-category="D" onclick="switchWorkoutTab('D')">
           <span class="tab-tag">Treino D</span>
-          <span class="tab-desc">Personalizado</span>
+          <span class="tab-desc">Ombros 3D</span>
+        </button>
+        <button class="workout-tab-btn" data-category="E" onclick="switchWorkoutTab('E')">
+          <span class="tab-tag">Treino E</span>
+          <span class="tab-desc">BraÁos Completos</span>
         </button>
         <button class="workout-tab-btn" data-category="ALL" onclick="switchWorkoutTab('ALL')">
           <span class="tab-tag">Todos</span>
@@ -67,32 +71,32 @@
         </button>
       </div>
 
-      <!-- Barra de A√ß√µes R√°pidas (Adicionar Exerc√≠cio) -->
+      <!-- Barra de AÁıes R·pidas (Adicionar ExercÌcio) -->
       <div class="action-banner-row">
         <button class="btn-primary-action" onclick="openExerciseFormModal()">
-          <span>‚ûï Adicionar Novo Exerc√≠cio</span>
+          <span>? Adicionar Novo ExercÌcio</span>
         </button>
         <button class="btn-secondary-action" onclick="openGoalsModal()">
-          <span>‚öôÔ∏è Metas</span>
+          <span>?? Metas</span>
         </button>
       </div>
 
-      <!-- Alerta de Seguran√ßa Biomec√¢nica da Perna -->
+      <!-- Alerta de SeguranÁa Biomec‚nica da Perna -->
       <div class="special-alert-card" id="polio-safe-alert" style="display: none;">
-        <div class="alert-icon">üõ°Ô∏è</div>
+        <div class="alert-icon">???</div>
         <div>
-          <h4>Biomec√¢nica Segura & Adaptada</h4>
-          <p>Treino elaborado com <strong>100% de m√°quinas com apoio e encosto total</strong>. Sem riscos de queda, perda de equil√≠brio ou sobrecarga articular perigosa. Cargas leves e foco em contra√ß√£o muscular controlada.</p>
+          <h4>Biomec‚nica Segura & Adaptada</h4>
+          <p>Treino elaborado com <strong>100% de m·quinas com apoio e encosto total</strong>. Sem riscos de queda, perda de equilÌbrio ou sobrecarga articular perigosa. Cargas leves e foco em contraÁ„o muscular controlada.</p>
         </div>
       </div>
 
       <!-- Resumo do Treino Selecionado -->
       <div class="workout-summary-card" id="workout-summary-content"></div>
 
-      <!-- Cron√¥metro R√°pido de Descanso -->
+      <!-- CronÙmetro R·pido de Descanso -->
       <div class="quick-timer-bar">
         <div>
-          <span style="font-size:0.7rem; color:var(--text-muted); font-weight:700; display:block;">DESCANSO ENTRE S√âRIES</span>
+          <span style="font-size:0.7rem; color:var(--text-muted); font-weight:700; display:block;">DESCANSO ENTRE S…RIES</span>
           <div class="timer-display" id="timer-display-val">01:00</div>
         </div>
         <div class="timer-presets">
@@ -106,15 +110,15 @@
 
       <!-- Filtro de Busca -->
       <div class="search-filter-box">
-        <input type="text" id="search-input" class="search-input" placeholder="üîç Filtrar exerc√≠cio ou m√∫sculo (ex: tr√≠ceps, voador, perna)..." oninput="renderExerciseList()">
+        <input type="text" id="search-input" class="search-input" placeholder="?? Filtrar exercÌcio ou m˙sculo (ex: trÌceps, voador, perna)..." oninput="renderExerciseList()">
       </div>
 
-      <!-- Lista de Exerc√≠cios -->
+      <!-- Lista de ExercÌcios -->
       <div class="exercise-list" id="exercise-list-container"></div>
     </section>
 
     <!-- ========================================== -->
-    <!-- VIEW 2: DIETA & NUTRI√á√ÉO                   -->
+    <!-- VIEW 2: DIETA & NUTRI«√O                   -->
     <!-- ========================================== -->
     <section id="view-nutrition" class="view-section">
       <div class="nutrition-header">
@@ -125,7 +129,7 @@
               Ajustado conforme suas metas de calorias e macros
             </p>
           </div>
-          <button class="btn-card-small" style="background:var(--bg-secondary); color:#fff; width:34px; height:34px;" onclick="openGoalsModal()" title="Editar metas de macros">‚öôÔ∏è</button>
+          <button class="btn-card-small" style="background:var(--bg-secondary); color:#fff; width:34px; height:34px;" onclick="openGoalsModal()" title="Editar metas de macros">??</button>
         </div>
 
         <div class="macro-ring-container">
@@ -134,7 +138,7 @@
             <div class="macro-val" id="macro-calories-val">2.650</div>
           </div>
           <div class="macro-box protein">
-            <div class="macro-name">Prote√≠na</div>
+            <div class="macro-name">ProteÌna</div>
             <div class="macro-val" id="macro-protein-val">145g</div>
           </div>
           <div class="macro-box carbs">
@@ -148,36 +152,36 @@
         </div>
       </div>
 
-      <!-- Contador de √Ågua Interativo -->
+      <!-- Contador de ¡gua Interativo -->
       <div class="water-card">
         <div class="water-info">
-          <h4>üíß Hidrata√ß√£o Di√°ria</h4>
+          <h4>?? HidrataÁ„o Di·ria</h4>
           <p id="water-count">0 ml / 3.000 ml</p>
         </div>
         <div class="water-controls">
           <button class="btn-water" onclick="addWater(250)" title="Adicionar 250ml">+250ml</button>
           <button class="btn-water" onclick="addWater(500)" title="Adicionar 500ml">+500ml</button>
-          <button class="btn-icon" style="height:34px; width:34px;" onclick="resetWater()" title="Zerar √°gua do dia">‚Ü∫</button>
+          <button class="btn-icon" style="height:34px; width:34px;" onclick="resetWater()" title="Zerar ·gua do dia">?</button>
         </div>
       </div>
 
-      <!-- Refei√ß√µes Di√°rias -->
+      <!-- RefeiÁıes Di·rias -->
       <div id="nutrition-meals-container"></div>
     </section>
 
     <!-- ========================================== -->
-    <!-- VIEW 3: EVOLU√á√ÉO E METAS DE PESO           -->
+    <!-- VIEW 3: EVOLU«√O E METAS DE PESO           -->
     <!-- ========================================== -->
     <section id="view-progress" class="view-section">
       <div class="progress-card">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-          <h2 style="font-size:1.2rem; font-weight:800;">Evolu√ß√£o de Peso Corporal</h2>
+          <h2 style="font-size:1.2rem; font-weight:800;">EvoluÁ„o de Peso Corporal</h2>
           <button class="btn-secondary-action" style="padding:6px 10px; font-size:0.75rem;" onclick="openGoalsModal()">
-            ‚öôÔ∏è Alterar Metas
+            ?? Alterar Metas
           </button>
         </div>
         <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">
-          Foco em ganho limpo e defini√ß√£o muscular constante.
+          Foco em ganho limpo e definiÁ„o muscular constante.
         </p>
 
         <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:16px;">
@@ -199,7 +203,7 @@
           <div class="progress-bar-fill" id="weight-progress-fill" style="width: 5%;"></div>
         </div>
         <div style="font-size:0.75rem; color:var(--text-muted); text-align:right;" id="weight-percent-text">
-          0% conclu√≠do
+          0% concluÌdo
         </div>
 
         <div style="margin-top:20px; border-top:1px solid var(--border-color); padding-top:14px;">
@@ -211,7 +215,7 @@
         </div>
 
         <div style="margin-top:20px;">
-          <h4 style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase;">Hist√≥rico de Pesagens</h4>
+          <h4 style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase;">HistÛrico de Pesagens</h4>
           <div class="weight-history-list" id="weight-history-list"></div>
         </div>
       </div>
@@ -222,15 +226,15 @@
     <!-- ========================================== -->
     <section id="view-settings" class="view-section">
       <div class="progress-card">
-        <h2 style="font-size:1.25rem; font-weight:800; color:var(--accent-primary); margin-bottom:6px;">Personaliza√ß√£o & Backup</h2>
+        <h2 style="font-size:1.25rem; font-weight:800; color:var(--accent-primary); margin-bottom:6px;">PersonalizaÁ„o & Backup</h2>
         <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:16px;">
-          Personalize todos os seus objetivos e fa√ßa backup dos seus dados para nunca perder nada.
+          Personalize todos os seus objetivos e faÁa backup dos seus dados para nunca perder nada.
         </p>
 
         <div class="settings-section-card">
-          <div class="settings-section-title">üéØ Ajustar Meus Objetivos e Metas</div>
+          <div class="settings-section-title">?? Ajustar Meus Objetivos e Metas</div>
           <p style="font-size:0.82rem; color:#CBD5E1; margin-bottom:12px; line-height:1.4;">
-            Voc√™ pode alterar o peso alvo (ex: subir a meta para 78kg ou ajustar calorias e macros quando o nutricionista passar novas orienta√ß√µes).
+            VocÍ pode alterar o peso alvo (ex: subir a meta para 78kg ou ajustar calorias e macros quando o nutricionista passar novas orientaÁıes).
           </p>
           <button class="btn-primary-action" onclick="openGoalsModal()">
             Editar Minhas Metas & Perfil
@@ -238,25 +242,25 @@
         </div>
 
         <div class="settings-section-card">
-          <div class="settings-section-title">üíæ Backup dos Seus Treinos e Hist√≥rico</div>
+          <div class="settings-section-title">?? Backup dos Seus Treinos e HistÛrico</div>
           <p style="font-size:0.82rem; color:#CBD5E1; margin-bottom:12px; line-height:1.4;">
-            Salve todos os seus exerc√≠cios customizados, hist√≥rico de pesos e cargas em um arquivo de backup para restaurar quando quiser.
+            Salve todos os seus exercÌcios customizados, histÛrico de pesos e cargas em um arquivo de backup para restaurar quando quiser.
           </p>
           <div style="display:flex; gap:8px;">
             <button class="btn-secondary-action" style="flex:1;" onclick="exportBackup()">
-              üì• Baixar Backup
+              ?? Baixar Backup
             </button>
             <button class="btn-secondary-action" style="flex:1;" onclick="triggerImportBackup()">
-              üì§ Restaurar Backup
+              ?? Restaurar Backup
             </button>
             <input type="file" id="backup-file-input" style="display:none;" accept=".json" onchange="handleImportBackup(event)">
           </div>
         </div>
 
         <div class="settings-section-card">
-          <div class="settings-section-title">üì± Dica de Atalho no Celular</div>
+          <div class="settings-section-title">?? Dica de Atalho no Celular</div>
           <p style="font-size:0.82rem; color:#CBD5E1; line-height:1.4;">
-            Para ter o √≠cone na tela do seu celular, abra <code>https://nilton-lysardo.github.io/meu-treino/</code> no Chrome, toque nos 3 pontinhos e selecione <strong>"Instalar aplicativo"</strong> ou <strong>"Adicionar √† tela inicial"</strong>.
+            Para ter o Ìcone na tela do seu celular, abra <code>https://nilton-lysardo.github.io/meu-treino/</code> no Chrome, toque nos 3 pontinhos e selecione <strong>"Instalar aplicativo"</strong> ou <strong>"Adicionar ‡ tela inicial"</strong>.
           </p>
         </div>
       </div>
@@ -264,40 +268,41 @@
 
   </main>
 
-  <!-- MODAL 1: FORMUL√ÅRIO DE ADICIONAR / EDITAR EXERC√çCIO -->
+  <!-- MODAL 1: FORMUL¡RIO DE ADICIONAR / EDITAR EXERCÕCIO -->
   <div class="modal-overlay" id="exercise-form-modal" onclick="closeExerciseFormModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close-btn" onclick="closeExerciseFormModal()">‚úï</button>
+      <button class="modal-close-btn" onclick="closeExerciseFormModal()">?</button>
       <h3 id="form-modal-title" style="font-size:1.15rem; font-weight:800; margin-bottom:14px; color:var(--accent-primary);"></h3>
       
       <form onsubmit="saveExerciseFromForm(event)">
         <input type="hidden" id="form-exercise-id">
 
         <div class="form-group">
-          <label class="form-label">Nome do Exerc√≠cio</label>
-          <input type="text" id="form-exercise-name" class="form-input" placeholder="Ex: Tr√≠ceps Testa na Barra W" required>
+          <label class="form-label">Nome do ExercÌcio</label>
+          <input type="text" id="form-exercise-name" class="form-input" placeholder="Ex: TrÌceps Testa na Barra W" required>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Treino</label>
             <select id="form-exercise-category" class="form-select">
-              <option value="A">Treino A (Peito / Ombro / Tr√≠ceps)</option>
-              <option value="B">Treino B (Costas / B√≠ceps)</option>
-              <option value="C">Treino C (Pernas / Core)</option>
-              <option value="D">Treino D (Personalizado)</option>
+              <option value="A">Treino A (Peitoral & TrÌceps)</option>
+              <option value="B">Treino B (Costas & Puxadas)</option>
+              <option value="C">Treino C (Pernas Seguras & AbdÙmen)</option>
+              <option value="D">Treino D (Ombros 3D & Postura)</option>
+              <option value="E">Treino E (BraÁos Completos - BÌceps & TrÌceps)</option>
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label">M√∫sculo Alvo</label>
+            <label class="form-label">M˙sculo Alvo</label>
             <select id="form-exercise-group" class="form-select">
               <option value="Peitoral">Peitoral</option>
               <option value="Costas">Costas</option>
               <option value="Ombros">Ombros</option>
-              <option value="B√≠ceps">B√≠ceps</option>
-              <option value="Tr√≠ceps">Tr√≠ceps</option>
+              <option value="BÌceps">BÌceps</option>
+              <option value="TrÌceps">TrÌceps</option>
               <option value="Pernas">Pernas</option>
-              <option value="Abd√¥men & Core">Abd√¥men & Core</option>
+              <option value="AbdÙmen & Core">AbdÙmen & Core</option>
               <option value="Panturrilhas">Panturrilhas</option>
               <option value="Outro">Outro</option>
             </select>
@@ -310,27 +315,27 @@
             <input type="text" id="form-exercise-weight" class="form-input" placeholder="Ex: 20 kg">
           </div>
           <div class="form-group">
-            <label class="form-label">S√©ries & Repeti√ß√µes</label>
+            <label class="form-label">SÈries & RepetiÁıes</label>
             <input type="text" id="form-exercise-sets" class="form-input" placeholder="Ex: 3x 10 a 12 reps">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Ilustra√ß√£o / Tipo de Aparelho</label>
+          <label class="form-label">IlustraÁ„o / Tipo de Aparelho</label>
           <select id="form-exercise-icon" class="form-select">
-            <option value="generic_gym">üèãÔ∏è Halter Gen√©rico</option>
+            <option value="generic_gym">??? Halter GenÈrico</option>
             <option value="bench_press">Supino / Barra</option>
-            <option value="chest_press">Chest Press M√°quina</option>
+            <option value="chest_press">Chest Press M·quina</option>
             <option value="peck_deck">Voador / Peck Deck</option>
             <option value="shoulder_press">Shoulder Press / Ombros</option>
-            <option value="lateral_raise">Eleva√ß√£o Lateral</option>
-            <option value="abducao_horizontal_ombro_polia">Abdu√ß√£o Horizontal na Polia</option>
+            <option value="lateral_raise">ElevaÁ„o Lateral</option>
+            <option value="abducao_horizontal_ombro_polia">AbduÁ„o Horizontal na Polia</option>
             <option value="lat_pulldown">Puxada Alta (Lat Pulldown)</option>
             <option value="seated_row">Remada Sentada</option>
-            <option value="biceps_curl">Rosca B√≠ceps</option>
+            <option value="biceps_curl">Rosca BÌceps</option>
             <option value="hammer_curl">Rosca Martelo</option>
-            <option value="triceps_pulley">Tr√≠ceps Polia / Corda</option>
-            <option value="triceps_machine">Tr√≠ceps M√°quina</option>
+            <option value="triceps_pulley">TrÌceps Polia / Corda</option>
+            <option value="triceps_machine">TrÌceps M·quina</option>
             <option value="leg_press">Leg Press (Apoio seguro)</option>
             <option value="leg_extension">Cadeira Extensora</option>
             <option value="leg_curl">Cadeira Flexora</option>
@@ -341,24 +346,24 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">Dicas de Postura & Execu√ß√£o</label>
+          <label class="form-label">Dicas de Postura & ExecuÁ„o</label>
           <textarea id="form-exercise-tip" class="form-textarea" placeholder="Descreva como executar com boa forma..."></textarea>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Cuidados Anat√¥micos (Opcional)</label>
+          <label class="form-label">Cuidados AnatÙmicos (Opcional)</label>
           <input type="text" id="form-exercise-caution" class="form-input" placeholder="Ex: Cuidado com os cotovelos...">
         </div>
 
-        <button type="submit" class="btn-form-save">Salvar Exerc√≠cio</button>
+        <button type="submit" class="btn-form-save">Salvar ExercÌcio</button>
       </form>
     </div>
   </div>
 
-  <!-- MODAL 2: FORMUL√ÅRIO DE METAS & PERFIL -->
+  <!-- MODAL 2: FORMUL¡RIO DE METAS & PERFIL -->
   <div class="modal-overlay" id="goals-modal" onclick="closeGoalsModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close-btn" onclick="closeGoalsModal()">‚úï</button>
+      <button class="modal-close-btn" onclick="closeGoalsModal()">?</button>
       <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:14px; color:var(--accent-primary);">Personalizar Meus Objetivos</h3>
 
       <form onsubmit="saveGoalsFromForm(event)">
@@ -374,13 +379,13 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">Meta Di√°ria de Calorias (kcal)</label>
+          <label class="form-label">Meta Di·ria de Calorias (kcal)</label>
           <input type="number" id="goal-calories" class="form-input" placeholder="2650" required>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Prote√≠na (g)</label>
+            <label class="form-label">ProteÌna (g)</label>
             <input type="number" id="goal-protein" class="form-input" placeholder="145" required>
           </div>
           <div class="form-group">
@@ -394,7 +399,7 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">Meta Di√°ria de √Ågua (ml)</label>
+          <label class="form-label">Meta Di·ria de ¡gua (ml)</label>
           <input type="number" step="100" id="goal-water" class="form-input" placeholder="3000" required>
         </div>
 
@@ -403,17 +408,17 @@
     </div>
   </div>
 
-  <!-- MODAL 3: ZOOM DE DETALHES DO EXERC√çCIO -->
+  <!-- MODAL 3: ZOOM DE DETALHES DO EXERCÕCIO -->
   <div class="modal-overlay" id="exercise-modal" onclick="closeExerciseModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close-btn" onclick="closeExerciseModal()">‚úï</button>
+      <button class="modal-close-btn" onclick="closeExerciseModal()">?</button>
       <h3 id="modal-title" style="font-size:1.15rem; font-weight:800; padding-right:30px;"></h3>
       <div class="modal-img-container" id="modal-img"></div>
       <div id="modal-desc"></div>
     </div>
   </div>
 
-  <!-- Barra de Navega√ß√£o Inferior (Bottom Bar) -->
+  <!-- Barra de NavegaÁ„o Inferior (Bottom Bar) -->
   <nav class="bottom-nav">
     <button class="nav-item active" data-tab="workouts" onclick="navigateToTab('workouts')">
       <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43L20.57 12L17 15.57L8.43 7L12 3.43L10.57 2L9.14 3.43L7.71 2L5.57 4.14L4.14 2.71L2.71 4.14L4.14 5.57L2 7.71L3.43 9.14L2 10.57L3.43 12L7 8.43L15.57 17L12 20.57L13.43 22L14.86 20.57L16.29 22L18.43 19.86L19.86 21.29L21.29 19.86L19.86 18.43L22 16.29L20.57 14.86Z"/></svg>
@@ -425,7 +430,7 @@
     </button>
     <button class="nav-item" data-tab="progress" onclick="navigateToTab('progress')">
       <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm4.5-9H7.5V6h9v2z"/></svg>
-      <span>Evolu√ß√£o</span>
+      <span>EvoluÁ„o</span>
     </button>
     <button class="nav-item" data-tab="settings" onclick="navigateToTab('settings')">
       <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
@@ -433,6 +438,6 @@
     </button>
   </nav>
 
-  <script src="app.js?v=4"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>

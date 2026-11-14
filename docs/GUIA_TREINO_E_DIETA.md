@@ -41,33 +41,51 @@ Para equilibrar o físico, deixar os ombros e braços mais densos e fortalecer a
 
 ---
 
-## 📅 3. Divisão de Treinos (ABC)
+## 📅 3. Divisão de Treinos em 5 Dias (Rotina ABCDE)
 
-### Treino A: Peito, Ombros e Tríceps (Empurrar)
-- Supino Reto: 3x 8 a 10 reps (15kg)
-- Chest Press Máquina: 3x 10 a 12 reps (39kg)
-- Voador / Peck Deck: 3x 12 reps (65kg)
-- Shoulder Press Máquina: 3x 10 a 12 reps (24kg)
-- Elevação Lateral: 3x 12 a 15 reps *(Novo)*
-- Tríceps Máquina Sentado: 3x 10 a 12 reps (50kg)
-- Pulley Tríceps ou Tríceps Corda: 3x 12 reps (42kg a 45.5kg)
+Para potencializar os ganhos sem sobrecarregar as articulações, a rotina foi estruturada em 5 treinos focados:
 
-### Treino B: Costas, Ombros Posterior e Bíceps (Puxar)
-- Lat Pulldown Frontal: 3x 10 a 12 reps (40kg)
-- Remada Máquina / Seated Row: 3x 10 a 12 reps (45.5kg)
-- Iso-Lateral Lat Pulldown ou T-Bar Row: 3x 10 a 12 reps
-- Voador Invertido (Costas): 3x 12 a 15 reps (19.5kg)
-- High Pulley Ombros Máquina: 3x 12 reps (42kg)
-- Rosca Bíceps na Barra: 3x 10 a 12 reps (5kg/lado)
-- Rosca Martelo com halteres: 3x 10 a 12 reps *(Novo)*
+### Treino A: Peitoral & Tríceps (Empurrar)
+- **Supino Reto na Barra**: 3x 8 a 10 reps (15 kg)
+- **Chest Press na Máquina**: 3x 10 a 12 reps (39 kg)
+- **Voador / Peck Deck**: 3x 12 reps (65 kg)
+- **Pulley Tríceps (Barra Reta ou V)**: 3x 12 reps (45,5 kg)
+- **Tríceps Corda na Polia**: 3x 12 a 15 reps (42 kg)
+- **Tríceps Máquina Sentado**: 3x 10 a 12 reps (50 kg)
 
-### Treino C: Pernas Adaptadas & Abdômen (Core)
-- Leg Press 45° ou Horizontal: 3x 10 a 12 reps (26kg - movimento controlado)
-- Cadeira Extensora: 3x 12 a 15 reps *(Novo - carga suave)*
-- Cadeira Flexora Sentada: 3x 12 reps *(Novo)*
-- Cadeira Abdutora: 3x 15 reps *(Novo - foco em estabilidade)*
-- Panturrilha Sentado: 3x 15 reps *(Novo)*
-- Abdominal Máquina ou Crunch Solo: 3x 15 a 20 reps *(Novo)*
+### Treino B: Costas & Puxadas (Dorsais e Espessura)
+- **Puxada Frontal (Lat Pulldown)**: 3x 10 a 12 reps (40 kg)
+- **Pulley Articulado**: 3x 10 a 12 reps *(Novo)*
+- **Puxada no Graviton (Barra Fixa Assistida)**: 3x 8 a 10 reps *(Novo)*
+- **Remada na Máquina**: 3x 10 a 12 reps (45,5 kg)
+- **Remada Cavalinho (T-Bar Row)**: 3x 10 a 12 reps (5 kg/lado)
+- **Remada Sentada com Barra (Seated Row)**: 3x 10 a 12 reps (45,5 kg)
+- **High Pulley Ombros & Trapézio**: 3x 12 reps (42 kg)
+
+### Treino C: Pernas Seguras & Abdômen (Core Adaptado)
+> *Todas as opções possuem suporte lombar completo, ideais para segurança articular e motora.*
+- **Leg Press 45° ou Horizontal**: 3x 10 a 12 reps (26 kg)
+- **Cadeira Extensora (Quadríceps)**: 3x 12 a 15 reps
+- **Cadeira Flexora Sentada (Posterior)**: 3x 12 reps
+- **Cadeira Abdutora (Glúteo Médio e Estabilidade de Marcha)**: 3x 15 reps
+- **Panturrilha Sentado**: 3x 15 reps
+- **Abdominal Máquina (Core)**: 3x 15 a 20 reps
+
+### Treino D: Ombros 3D & Postura (Deltoides Completo)
+- **Shoulder Press na Máquina**: 3x 10 a 12 reps (24 kg)
+- **Elevação Lateral com Halteres**: 3x 12 a 15 reps
+- **Abdução Horizontal de Ombro na Polia**: 3x 12 a 15 reps
+- **Crucifixo Invertido / Voador Invertido**: 3x 12 a 15 reps (19,5 kg)
+- **Elevação Frontal na Polia**: 3x 12 a 15 reps *(Novo)*
+
+### Treino E: Braços Completos (Bíceps & Tríceps Hipertrofia)
+- **Rosca com Barra W (Pegada Anatômica)**: 3x 10 a 12 reps *(Novo)*
+- **Rosca com Halteres no Banco Inclinado**: 3x 10 a 12 reps *(Novo - pico da cabeça longa)*
+- **Rosca com Corda na Polia Baixa**: 3x 12 reps *(Novo)*
+- **Rosca Concentrada (Sentado)**: 3x 10 a 12 reps *(Novo - isolamento estrito)*
+- **Rosca Martelo com Halteres**: 3x 10 a 12 reps (braquial e antebraço)
+- **Rosca Bíceps na Barra Reta**: 3x 10 reps (5 kg/lado)
+- **Pulley Tríceps Unilateral**: 3x 12 a 15 reps *(Novo)*
 
 ---
 

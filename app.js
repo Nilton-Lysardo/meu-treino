@@ -339,37 +339,58 @@ const SVG_ICONS = {
     </svg>`
 };
 
-// 2. BANCO DE DADOS DOS EXERCÍCIOS INICIAIS
+// 2. BANCO DE DADOS DOS EXERCÍCIOS INICIAIS (DIVISÃO OFICIAL DE 5 DIAS)
 const DEFAULT_EXERCISES = [
-  // TREINO A
-  { id: "supino", name: "Supino Reto (Barra / Halteres)", category: "A", group: "Peitoral", defaultWeight: "15 kg", sets: "3 a 4 séries de 8 a 12 reps", iconKey: "bench_press", isNew: false, tip: "Mantenha as escápulas aduzidas. Desça a barra controladamente.", caution: "Não trave os cotovelos bruscamente no topo." },
-  { id: "voador", name: "Voador (Peck Deck Máquina)", category: "A", group: "Peitoral", defaultWeight: "65 kg", sets: "3 a 4 séries de 10 a 12 reps", iconKey: "peck_deck", isNew: false, tip: "Feche os braços com cotovelos levemente flexionados.", caution: "Ajuste o banco para que as mãos fiquem na linha do peitoral." },
-  { id: "chest_press", name: "Chest Press Máquina", category: "A", group: "Peitoral", defaultWeight: "39 kg", sets: "3 séries de 10 a 12 reps", iconKey: "chest_press", isNew: false, tip: "Apoie bem a lombar no encosto. Trajetória guiada muito segura.", caution: "Evite empurrar projetando os ombros para frente." },
-  { id: "shoulder_press", name: "Elevação Ombro Máquina (Shoulder Press)", category: "A", group: "Ombros", defaultWeight: "24 kg", sets: "3 séries de 10 a 12 reps", iconKey: "shoulder_press", isNew: false, tip: "Empurre para o alto mantendo os cotovelos no plano escapular.", caution: "Não jogue o queixo ou o tronco para frente." },
-  { id: "lateral_raise", name: "Elevação Lateral (Halteres / Polia)", category: "A", group: "Ombros", defaultWeight: "5 a 7 kg", sets: "3 a 4 séries de 12 a 15 reps", iconKey: "lateral_raise", isNew: true, tip: "Essencial para ombro largo em formato 'V'.", caution: "Use carga controlada sem impulso do tronco." },
-  { id: "pulley_triceps", name: "Pulley Tríceps (Barra / Cabo)", category: "A", group: "Tríceps", defaultWeight: "45.5 kg", sets: "3 séries de 10 a 12 reps", iconKey: "triceps_pulley", isNew: false, tip: "Cotovelos colados na lateral do corpo.", caution: "Não balance o corpo." },
-  { id: "triceps_corda", name: "Tríceps Corda no Pulley", category: "A", group: "Tríceps", defaultWeight: "42 kg", sets: "3 séries de 10 a 12 reps", iconKey: "triceps_pulley", isNew: false, tip: "Abra a ponta da corda embaixo para contrair ao máximo.", caution: "Segure 1 segundo embaixo." },
-  { id: "triceps_maquina", name: "Tríceps Máquina Sentado (Dip)", category: "A", group: "Tríceps", defaultWeight: "50 kg", sets: "3 séries de 10 a 12 reps", iconKey: "triceps_machine", isNew: false, tip: "Mergulho sentado com estabilidade total.", caution: "Mantenha a coluna reta no encosto." },
+  // ==========================================
+  // TREINO A: PEITORAL & TRÍCEPS (Push Focus)
+  // ==========================================
+  { id: "supino", name: "Supino Reto (Barra / Halteres)", category: "A", group: "Peitoral", defaultWeight: "15 kg cada lado", sets: "3 a 4 séries de 8 a 12 reps", iconKey: "bench_press", isNew: false, tip: "Mantenha as escápulas aduzidas e peito estufado. Desça a barra controladamente até o peitoral.", caution: "Não trave os cotovelos bruscamente no topo." },
+  { id: "chest_press", name: "Chest Press Máquina", category: "A", group: "Peitoral", defaultWeight: "39 kg", sets: "3 séries de 10 a 12 reps", iconKey: "chest_press", isNew: false, tip: "Apoie bem a lombar no encosto. Trajetória guiada muito segura para hipertrofia com carga constante.", caution: "Evite empurrar projetando os ombros para frente." },
+  { id: "voador", name: "Voador (Peck Deck Máquina)", category: "A", group: "Peitoral", defaultWeight: "65 kg", sets: "3 a 4 séries de 10 a 12 reps", iconKey: "peck_deck", isNew: false, tip: "Feche os braços com cotovelos levemente flexionados, apertando o centro do peitoral por 1 segundo.", caution: "Ajuste a altura do banco para que as mãos fiquem alinhadas ao meio do peito." },
+  { id: "pulley_triceps", name: "Pulley Tríceps (Barra Reta / Cabo)", category: "A", group: "Tríceps", defaultWeight: "45.5 kg", sets: "3 séries de 10 a 12 reps", iconKey: "triceps_pulley", isNew: false, tip: "Cotovelos colados ao lado do corpo, estenda totalmente o antebraço para baixo.", caution: "Não projete os ombros ou balance o tronco durante a execução." },
+  { id: "triceps_corda", name: "Tríceps Corda no Pulley", category: "A", group: "Tríceps", defaultWeight: "42 kg", sets: "3 séries de 10 a 12 reps", iconKey: "triceps_pulley", isNew: false, tip: "Abra bem a ponta da corda embaixo para máxima contração da cabeça lateral do tríceps.", caution: "Segure 1 segundo no ponto de máxima extensão." },
+  { id: "triceps_maquina", name: "Tríceps Máquina Sentado (Dip)", category: "A", group: "Tríceps", defaultWeight: "50 kg", sets: "3 séries de 10 a 12 reps", iconKey: "triceps_machine", isNew: false, tip: "Mergulho sentado com estabilidade total. Excelente para volume do braço.", caution: "Mantenha a coluna firme contra o encosto." },
 
-  // TREINO B
-  { id: "lat_pulldown", name: "Lat Pulldown (Puxada Alta Frontal)", category: "B", group: "Costas", defaultWeight: "40 kg", sets: "3 a 4 séries de 10 a 12 reps", iconKey: "lat_pulldown", isNew: false, tip: "Puxe a barra em direção ao peitoral estufado.", caution: "Nunca puxe por trás do pescoço." },
-  { id: "remada_maquina", name: "Remada Máquina / Sentado", category: "B", group: "Costas", defaultWeight: "45.5 kg", sets: "3 séries de 10 a 12 reps", iconKey: "seated_row", isNew: false, tip: "Apoie o peito ou mantenha a postura reta puxando as escápulas.", caution: "Não curve a lombar." },
-  { id: "seated_row_barra", name: "Seated Row (Costas com Barra / Cabo)", category: "B", group: "Costas", defaultWeight: "45.5 kg", sets: "3 séries de 10 a 12 reps", iconKey: "seated_row", isNew: false, tip: "Pés firmes, puxe na altura do umbigo.", caution: "Joelhos destravados." },
-  { id: "iso_lateral_pulldown", name: "Iso Lateral Cross Lat Pulldown", category: "B", group: "Costas", defaultWeight: "15 kg cada lado anilha", sets: "3 séries de 10 a 12 reps", iconKey: "lat_pulldown", isNew: false, tip: "Puxada independente que equilibra os dois lados.", caution: "Puxada controlada." },
-  { id: "t_bar_row", name: "T-Bar Row Unilateral / Cavalinho", category: "B", group: "Costas", defaultWeight: "5 kg cada lado anilha", sets: "3 séries de 10 a 12 reps", iconKey: "seated_row", isNew: false, tip: "Concentre na asa das costas.", caution: "Apoie o peito se for banco articulado." },
-  { id: "costas_voador", name: "Costas Voador (Crucifixo Invertido)", category: "B", group: "Costas e Ombros", defaultWeight: "19.5 kg", sets: "3 séries de 12 a 15 reps", iconKey: "reverse_fly", isNew: false, tip: "Sentado de frente para o banco, abra os braços para trás.", caution: "Cotovelos na linha dos ombros." },
-  { id: "high_pulley_ombros", name: "High Pulley Ombros Máquina", category: "B", group: "Ombros e Trapézio", defaultWeight: "42 kg", sets: "3 séries de 12 reps", iconKey: "shoulder_press", isNew: false, tip: "Puxada alta para trapézio e postura ereta.", caution: "Cadência sem pressa." },
-  { id: "biceps_barra", name: "Bíceps Barra (Rosca Direta)", category: "B", group: "Bíceps", defaultWeight: "5 kg cada lado", sets: "3 a 4 séries de 10 a 12 reps", iconKey: "biceps_curl", isNew: false, tip: "Cotovelos parados ao lado do corpo.", caution: "Não balance as costas." },
-  { id: "hammer_curl", name: "Rosca Martelo com Halteres", category: "B", group: "Bíceps e Antebraço", defaultWeight: "6 a 8 kg cada halter", sets: "3 séries de 10 a 12 reps", iconKey: "hammer_curl", isNew: true, tip: "Palmas viradas para dentro, constrói braquial e braço espesso.", caution: "Faça sentado com apoio para conforto." },
-  { id: "abducao_horizontal_ombro_polia", name: "Abdução Horizontal de Ombro na Polia", category: "B", group: "Ombros (Posterior) & Costas", defaultWeight: "10 a 15 kg", sets: "3 séries de 12 a 15 reps", iconKey: "abducao_horizontal_ombro_polia", isNew: true, tip: "Ajuste as polias na altura do peito/ombro com cabos cruzados. Puxe abrindo os braços para trás na horizontal, esmagando o deltoide posterior e escápulas.", caution: "Mantenha os cotovelos levemente flexionados e travados sem tranco na lombar." },
+  // ==========================================
+  // TREINO B: COSTAS & PUXADAS (Pull Focus)
+  // ==========================================
+  { id: "puxada_frontal", name: "Puxada Frontal na Polia (Lat Pulldown)", category: "B", group: "Costas", defaultWeight: "40 kg", sets: "3 a 4 séries de 10 a 12 reps", iconKey: "lat_pulldown", isNew: false, tip: "Puxe a barra em direção à parte superior do peitoral com cotovelos apontando para baixo.", caution: "Nunca puxe por trás do pescoço; incline levemente o tronco para trás." },
+  { id: "pulley_articulado", name: "Pulley Articulado (Puxada Convergente)", category: "B", group: "Costas", defaultWeight: "20 kg cada lado", sets: "3 séries de 10 a 12 reps", iconKey: "pulley_articulado", isNew: true, tip: "Puxada em máquina articulada com movimento convergente que maximiza a amplitude das dorsais.", caution: "Desça de forma simétrica sem dar tranco com o corpo." },
+  { id: "puxada_graviton", name: "Puxada no Graviton (Barra Fixa Assistida)", category: "B", group: "Costas & Dorsal", defaultWeight: "Placas de alívio (ex: 35 kg)", sets: "3 séries de 8 a 10 reps", iconKey: "puxada_graviton", isNew: true, tip: "Apoie os joelhos na plataforma móvel. Realize a subida puxando o peito em direção à barra.", caution: "Controle a descida lentamente sem esticar o ombro abruptamente." },
+  { id: "remada_maquina", name: "Remada Máquina / Sentado", category: "B", group: "Costas", defaultWeight: "45.5 kg", sets: "3 séries de 10 a 12 reps", iconKey: "seated_row", isNew: false, tip: "Apoie o peito ou mantenha a postura ereta puxando com força nas escápulas.", caution: "Não curve a lombar." },
+  { id: "t_bar_row", name: "T-Bar Row Cavalinho (Apoiado)", category: "B", group: "Costas", defaultWeight: "15 kg anilha", sets: "3 séries de 10 a 12 reps", iconKey: "seated_row", isNew: false, tip: "Concentre na contração da asa das costas e espessura do meio das costas.", caution: "Apoie o tronco no banco acolchoado para segurança lombar." },
+  { id: "seated_row_barra", name: "Seated Row (Costas com Barra / Cabo)", category: "B", group: "Costas", defaultWeight: "45.5 kg", sets: "3 séries de 10 a 12 reps", iconKey: "seated_row", isNew: false, tip: "Pés firmes na plataforma, puxe a barra na altura do umbigo estufando o peito.", caution: "Mantenha os joelhos ligeiramente destravados." },
+  { id: "high_pulley_ombros", name: "High Pulley Ombros Máquina (Trapézio)", category: "B", group: "Costas e Trapézio", defaultWeight: "42 kg", sets: "3 séries de 12 a 15 reps", iconKey: "high_pulley_ombros", isNew: false, tip: "Puxada alta para trapézio e postura ereta, ajudando no alinhamento dos ombros.", caution: "Cadência controlada sem pressa." },
 
-  // TREINO C
-  { id: "leg_press", name: "Leg Press 45° ou Horizontal", category: "C", group: "Pernas (Adaptado)", defaultWeight: "26 kg", sets: "3 séries de 10 a 12 reps", iconKey: "leg_press", isNew: false, tip: "Apoie os dois pés firmes. Desça até ~90° sem desgrudar a lombar.", caution: "Nunca estenda totalmente os joelhos (não trave no topo)." },
-  { id: "leg_extension", name: "Cadeira Extensora (Foco Seguro)", category: "C", group: "Quadríceps (Adaptado)", defaultWeight: "10 a 15 kg", sets: "3 séries de 12 a 15 reps", iconKey: "leg_extension", isNew: true, tip: "Coluna totalmente encostada. Pode ser feito bilateral ou unilateral leve.", caution: "Segure firme nas manoplas laterais." },
-  { id: "leg_curl", name: "Cadeira Flexora Sentada", category: "C", group: "Posterior de Coxa", defaultWeight: "15 a 20 kg", sets: "3 séries de 12 reps", iconKey: "leg_curl", isNew: true, tip: "Apoio total sentado com coxa travada. Zero risco de desequilíbrio.", caution: "Ajuste o rolo logo acima dos calcanhares." },
-  { id: "abductor", name: "Cadeira Abdutora (Quadril & Estabilidade)", category: "C", group: "Glúteos & Estabilidade", defaultWeight: "20 a 30 kg", sets: "3 séries de 15 reps", iconKey: "abductor", isNew: true, tip: "MUITO IMPORTANTE: Fortalece o glúteo médio, essencial para estabilidade ao andar.", caution: "Abra devagar e segure 1 segundo." },
-  { id: "calf_raise", name: "Panturrilha Sentado (Gêmeos)", category: "C", group: "Panturrilhas", defaultWeight: "15 a 20 kg", sets: "3 séries de 15 reps", iconKey: "calf_raise", isNew: true, tip: "Totalmente sentado com almofada sobre os joelhos.", caution: "Suba na ponta dos pés e desça alongando." },
-  { id: "abs_machine", name: "Abdominal Máquina ou Crunch Solo", category: "C", group: "Abdômen & Core", defaultWeight: "Peso corporal ou 15kg", sets: "3 séries de 15 a 20 reps", iconKey: "abs_machine", isNew: true, tip: "Fortalece o core, protege a lombar e define.", caution: "Solte o ar pela boca ao flexionar o abdômen." }
+  // ==========================================
+  // TREINO C: PERNAS (Adaptado & Seguro) & ABDÔMEN
+  // ==========================================
+  { id: "leg_press", name: "Leg Press 45° ou Horizontal", category: "C", group: "Pernas (Adaptado)", defaultWeight: "26 kg", sets: "3 séries de 10 a 12 reps", iconKey: "leg_press", isNew: false, tip: "Apoie os dois pés firmes na plataforma. Desça até ~90° sem desgrudar a lombar do assento.", caution: "Nunca estenda totalmente os joelhos (não trave no topo)." },
+  { id: "leg_extension", name: "Cadeira Extensora (Foco Seguro)", category: "C", group: "Quadríceps (Adaptado)", defaultWeight: "10 a 15 kg", sets: "3 séries de 12 a 15 reps", iconKey: "leg_extension", isNew: true, tip: "Coluna totalmente apoiada no encosto. Pode ser feito bilateral ou unilateral com carga leve.", caution: "Segure firme nas manoplas laterais para estabilidade." },
+  { id: "leg_curl", name: "Cadeira Flexora Sentada", category: "C", group: "Posterior de Coxa", defaultWeight: "15 a 20 kg", sets: "3 séries de 12 reps", iconKey: "leg_curl", isNew: true, tip: "Apoio total sentado com coxa travada pela almofada. Zero risco de desequilíbrio.", caution: "Ajuste o rolo logo acima dos calcanhares." },
+  { id: "abductor", name: "Cadeira Abdutora (Quadril & Estabilidade)", category: "C", group: "Glúteos & Estabilidade", defaultWeight: "20 a 30 kg", sets: "3 séries de 15 reps", iconKey: "abductor", isNew: true, tip: "MUITO IMPORTANTE: Fortalece o glúteo médio, essencial para estabilidade pélvica e marcha equilibrada.", caution: "Abra controlando o peso e segure 1 segundo na abertura máxima." },
+  { id: "calf_raise", name: "Panturrilha Sentado na Máquina (Gêmeos)", category: "C", group: "Panturrilhas", defaultWeight: "15 a 20 kg", sets: "3 séries de 15 a 20 reps", iconKey: "calf_raise", isNew: true, tip: "Totalmente sentado com almofada sobre os joelhos. Eleve ao máximo e desça alongando.", caution: "Faça movimento amplo sem rebote rápido." },
+  { id: "abs_machine", name: "Abdominal Máquina ou Crunch Solo", category: "C", group: "Abdômen & Core", defaultWeight: "Peso corporal ou 15 kg", sets: "3 séries de 15 a 20 reps", iconKey: "abs_machine", isNew: true, tip: "Fortalece o core, protege a coluna lombar e define o abdômen.", caution: "Solte o ar pela boca ao flexionar o tronco." },
+
+  // ==========================================
+  // TREINO D: OMBROS 3D & POSTURA (Deltoides Completo)
+  // ==========================================
+  { id: "shoulder_press", name: "Elevação Ombro Máquina (Shoulder Press)", category: "D", group: "Ombros (Anterior/Lateral)", defaultWeight: "24 kg", sets: "3 séries de 10 a 12 reps", iconKey: "shoulder_press", isNew: false, tip: "Empurre para o alto mantendo os cotovelos no plano escapular (levemente à frente do corpo).", caution: "Não jogue o queixo ou o tronco para frente." },
+  { id: "lateral_raise", name: "Elevação Lateral (Halteres / Polia)", category: "D", group: "Ombros (Lateral)", defaultWeight: "5 a 7 kg", sets: "3 a 4 séries de 12 a 15 reps", iconKey: "lateral_raise", isNew: true, tip: "Essencial para ombro largo em formato 'V' e aspecto 3D atlético.", caution: "Use carga moderada sem impulso do quadril." },
+  { id: "abducao_horizontal_ombro_polia", name: "Abdução Horizontal de Ombro na Polia", category: "D", group: "Ombros (Posterior)", defaultWeight: "10 a 15 kg", sets: "3 séries de 12 a 15 reps", iconKey: "abducao_horizontal_ombro_polia", isNew: true, tip: "Fique em pé com uma mão apoiada atrás do quadril, ajuste a polia na altura do peito/ombro. Puxe o cabo abrindo o braço lateralmente na horizontal até a linha do ombro, focando na contração do deltoide posterior.", caution: "Mantenha o braço livre apoiado atrás da lombar para estabilizar a postura." },
+  { id: "crucifixo_invertido", name: "Crucifixo Invertido (Peck Deck Invertido)", category: "D", group: "Ombros (Posterior) & Escápulas", defaultWeight: "19.5 kg", sets: "3 séries de 12 a 15 reps", iconKey: "crucifixo_invertido", isNew: false, tip: "Sentado de frente para o banco do voador, abra os braços para trás na linha dos ombros.", caution: "Concentre o esforço na parte de trás dos ombros e adução das escápulas." },
+  { id: "elevacao_frontal_polia", name: "Elevação Frontal na Polia Baixa", category: "D", group: "Ombros (Anterior)", defaultWeight: "10 kg", sets: "3 séries de 12 reps", iconKey: "elevacao_frontal_polia", isNew: true, tip: "Suba o cabo com a pegada pronada até a altura dos olhos, descendo controladamente.", caution: "Mantenha o tronco firme sem inclinar para trás." },
+
+  // ==========================================
+  // TREINO E: BRAÇOS COMPLETOS (Bíceps, Tríceps & Antebraço)
+  // ==========================================
+  { id: "rosca_barra_w", name: "Rosca com Barra W (Bíceps)", category: "E", group: "Bíceps", defaultWeight: "7 a 10 kg cada lado", sets: "3 a 4 séries de 10 a 12 reps", iconKey: "rosca_barra_w", isNew: true, tip: "A curvatura anatômica da barra W poupa os punhos e permite contrair os bíceps com máxima força.", caution: "Mantenha os cotovelos fixos ao lado das costelas." },
+  { id: "rosca_inclinada", name: "Rosca com Halteres Inclinada no Banco", category: "E", group: "Bíceps (Cabeça Longa)", defaultWeight: "7 a 9 kg cada halter", sets: "3 séries de 10 a 12 reps", iconKey: "rosca_inclinada", isNew: true, tip: "Banco inclinado a ~60°. Proporciona um alongamento inicial profundo na cabeça longa do bíceps, criando pico.", caution: "Não levante os ombros do encosto do banco." },
+  { id: "rosca_corda_polia", name: "Rosca com Corda na Polia Baixa", category: "E", group: "Bíceps & Braquial", defaultWeight: "15 a 20 kg", sets: "3 séries de 12 reps", iconKey: "rosca_corda_polia", isNew: true, tip: "Pegada neutra na corda com polia no chão. No topo da subida, afaste as pontas da corda para pico de tensão.", caution: "Controle a volta sem deixar os pesos baterem na pilha." },
+  { id: "rosca_concentrada", name: "Rosca Concentrada com Halter Sentado", category: "E", group: "Bíceps (Pico)", defaultWeight: "8 a 10 kg", sets: "3 séries de 10 a 12 reps", iconKey: "rosca_concentrada", isNew: true, tip: "Apoie o cotovelo na parte interna da coxa. Isole o bíceps com zero ajuda de impulso corporal.", caution: "Suba girando a palma da mão para fora (supinação máxima)." },
+  { id: "hammer_curl", name: "Rosca Martelo com Halteres", category: "E", group: "Bíceps e Antebraço", defaultWeight: "8 a 10 kg cada halter", sets: "3 séries de 10 a 12 reps", iconKey: "hammer_curl", isNew: true, tip: "Palmas viradas para dentro (pegada neutra). Constrói o músculo braquial e antebraço espesso.", caution: "Faça sentado com apoio de tronco para manter a técnica perfeita." },
+  { id: "biceps_barra", name: "Bíceps Barra (Rosca Direta Clássica)", category: "E", group: "Bíceps", defaultWeight: "5 a 8 kg cada lado", sets: "3 séries de 10 a 12 reps", iconKey: "biceps_curl", isNew: false, tip: "Pegada tradicional com pegada supinada para espessura geral do bíceps.", caution: "Não balance as costas para jogar o peso." },
+  { id: "pulley_triceps_e", name: "Pulley Tríceps Unilateral / Cabo", category: "E", group: "Tríceps", defaultWeight: "15 a 20 kg", sets: "3 séries de 12 a 15 reps", iconKey: "triceps_pulley", isNew: true, tip: "Execução com foco no equilíbrio muscular e isolamento de cada braço.", caution: "Estenda o cotovelo totalmente sem mexer o ombro." }
 ];
 
 // 3. ESTADO GLOBAL DO APLICATIVO (PERSONALIZÁVEL)
@@ -396,37 +417,252 @@ let appState = {
 
 // 4. IDENTIFICADOR INTELIGENTE DE IMAGENS DOS EXERCÍCIOS
 function getExerciseImagePath(ex) {
-  if (ex.id === 'abducao_horizontal_ombro_polia' || ex.iconKey === 'abducao_horizontal_ombro_polia') {
-    return 'images/abducao_horizontal_ombro_polia.png';
-  }
+  if (!ex) return 'images/supino.png';
+  const id = (ex.id || '').toLowerCase();
+  const icon = (ex.iconKey || '').toLowerCase();
   const norm = (ex.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  if ((norm.includes('abduc') || norm.includes('abert')) && (norm.includes('horizontal') || norm.includes('polia') || norm.includes('ombro'))) {
+
+  // 1. Puxada no Graviton / Barra Fixa Assistida
+  if (id.includes('graviton') || icon.includes('graviton') || norm.includes('graviton') || (norm.includes('barra') && norm.includes('assistid'))) {
+    return 'images/puxada_graviton.png';
+  }
+
+  // 2. Rosca Concentrada
+  if (id.includes('concentrad') || icon.includes('concentrad') || norm.includes('concentrad')) {
+    return 'images/rosca_concentrada.png';
+  }
+
+  // 3. Rosca com Halteres Inclinada / Banco Inclinado
+  if (id.includes('inclinad') || icon.includes('inclinad') || norm.includes('inclinad')) {
+    return 'images/rosca_inclinada.png';
+  }
+
+  // 4. Rosca com Corda na Polia Baixa
+  if (id.includes('corda_polia') || norm.includes('corda na polia') || (norm.includes('corda') && norm.includes('polia')) || (norm.includes('rosca') && norm.includes('corda'))) {
+    return 'images/rosca_corda_polia.png';
+  }
+
+  // 5. Rosca com Barra W / EZ Bar
+  if (id.includes('barra_w') || norm.includes('barra w') || norm.includes('barra ez') || norm.includes('rosca w')) {
+    return 'images/rosca_barra_w.png';
+  }
+
+  // 6. Abdução Horizontal de Ombro na Polia
+  if (id === 'abducao_horizontal_ombro_polia' || icon === 'abducao_horizontal_ombro_polia' || 
+      ((norm.includes('abduc') || norm.includes('abert')) && (norm.includes('horizontal') || norm.includes('polia')) && norm.includes('ombro'))) {
     return 'images/abducao_horizontal_ombro_polia.png';
   }
+
+  // 7. Crucifixo Invertido / Voador Invertido / Costas Voador
+  if (id.includes('crucifixo_invertido') || id.includes('costas_voador') || norm.includes('crucifixo invertido') || norm.includes('voador invertido') || norm.includes('costas voador') || (norm.includes('invertid') && (norm.includes('crucifixo') || norm.includes('voador')))) {
+    return 'images/crucifixo_invertido.png';
+  }
+
+  // 8. Pulley Articulado / Puxada Articulada
+  if (id.includes('articulad') || norm.includes('articulad')) {
+    return 'images/pulley_articulado.png';
+  }
+
+  // 9. Puxada Frontal / Lat Pulldown
+  if (id.includes('lat_pulldown') || id.includes('puxada_frontal') || norm.includes('puxada frontal') || norm.includes('puxada alta') || norm.includes('lat pulldown')) {
+    return 'images/lat_pulldown.png';
+  }
+
+  // 10. Elevação Frontal na Polia
+  if (id.includes('elevacao_frontal') || norm.includes('elevacao frontal') || (norm.includes('frontal') && norm.includes('polia'))) {
+    return 'images/elevacao_frontal_polia.png';
+  }
+
+  // 11. Elevação Lateral
+  if (id.includes('lateral_raise') || norm.includes('elevacao lateral') || norm.includes('lateral')) {
+    return 'images/lateral_raise.png';
+  }
+
+  // 12. Supino Reto
+  if (id.includes('supino') || norm.includes('supino')) {
+    return 'images/supino.png';
+  }
+
+  // 13. Chest Press
+  if (id.includes('chest_press') || norm.includes('chest press')) {
+    return 'images/chest_press.png';
+  }
+
+  // 14. Voador / Peck Deck
+  if (id === 'voador' || norm.includes('peck deck') || (norm.includes('voador') && !norm.includes('invertid'))) {
+    return 'images/voador.png';
+  }
+
+  // 15. Shoulder Press / Desenvolvimento
+  if (id.includes('shoulder_press') || norm.includes('shoulder press') || norm.includes('desenvolvimento') || (norm.includes('elevacao') && norm.includes('ombro'))) {
+    return 'images/shoulder_press.png';
+  }
+
+  // 16. Tríceps Corda
+  if (id.includes('triceps_corda') || (norm.includes('triceps') && norm.includes('corda'))) {
+    return 'images/triceps_corda.png';
+  }
+
+  // 17. Tríceps Máquina / Dip
+  if (id.includes('triceps_maquina') || norm.includes('triceps maquina') || norm.includes('mergulho')) {
+    return 'images/triceps_maquina.png';
+  }
+
+  // 18. Pulley Tríceps / Tríceps Barra
+  if (id.includes('pulley_triceps') || (norm.includes('triceps') && (norm.includes('pulley') || norm.includes('barra') || norm.includes('cabo')))) {
+    return 'images/pulley_triceps.png';
+  }
+
+  // 19. Rosca Martelo
+  if (id.includes('hammer') || norm.includes('martelo') || norm.includes('hammer')) {
+    return 'images/hammer_curl.png';
+  }
+
+  // 20. Bíceps Barra / Rosca Direta
+  if (id.includes('biceps_barra') || norm.includes('rosca direta') || (norm.includes('biceps') && norm.includes('barra'))) {
+    return 'images/biceps_barra.png';
+  }
+
+  // 21. Remada Máquina
+  if (id.includes('remada_maquina') || (norm.includes('remada') && norm.includes('maquina'))) {
+    return 'images/remada_maquina.png';
+  }
+
+  // 22. T-Bar Row / Cavalinho
+  if (id.includes('t_bar') || norm.includes('cavalinho') || norm.includes('t-bar') || norm.includes('t bar')) {
+    return 'images/t_bar_row.png';
+  }
+
+  // 23. Seated Row com Barra
+  if (id.includes('seated_row') || norm.includes('seated row')) {
+    return 'images/seated_row_barra.png';
+  }
+
+  // 24. High Pulley / Trapézio
+  if (id.includes('high_pulley') || norm.includes('high pulley') || norm.includes('encolhimento')) {
+    return 'images/high_pulley_ombros.png';
+  }
+
+  // 25. Leg Press
+  if (id.includes('leg_press') || norm.includes('leg press')) {
+    return 'images/leg_press.png';
+  }
+
+  // 26. Cadeira Extensora
+  if (id.includes('leg_extension') || norm.includes('extensora')) {
+    return 'images/leg_extension.png';
+  }
+
+  // 27. Cadeira Flexora
+  if (id.includes('leg_curl') || norm.includes('flexora')) {
+    return 'images/leg_curl.png';
+  }
+
+  // 28. Cadeira Abdutora
+  if (id.includes('abductor') || norm.includes('abdutora')) {
+    return 'images/abductor.png';
+  }
+
+  // 29. Panturrilha
+  if (id.includes('calf') || norm.includes('panturrilha') || norm.includes('gemeos')) {
+    return 'images/calf_raise.png';
+  }
+
+  // 30. Abdominal / Core
+  if (id.includes('abs') || norm.includes('abdominal') || norm.includes('crunch')) {
+    return 'images/abs_machine.png';
+  }
+
   return `images/${ex.id}.png`;
 }
 
-// 5. CARREGAR E SALVAR DADOS NO LOCALSTORAGE
+// 5. CARREGAR E SALVAR DADOS NO LOCALSTORAGE COM MIGRAÇÃO INTELIGENTE
+function mergeTo5DaySplit(userExercises) {
+  if (!Array.isArray(userExercises) || userExercises.length === 0) {
+    return [...DEFAULT_EXERCISES];
+  }
+
+  const defaultById = new Map();
+  const defaultByNormName = new Map();
+
+  DEFAULT_EXERCISES.forEach(def => {
+    defaultById.set(def.id, def);
+    const n = (def.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    defaultByNormName.set(n, def);
+  });
+
+  const merged = [];
+  const handledDefaultIds = new Set();
+
+  userExercises.forEach(uex => {
+    const norm = (uex.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    let matchedDef = null;
+
+    if (defaultById.has(uex.id)) {
+      matchedDef = defaultById.get(uex.id);
+    } else {
+      for (const [defNorm, def] of defaultByNormName.entries()) {
+        if (norm.includes(defNorm) || defNorm.includes(norm) ||
+            (norm.includes('graviton') && defNorm.includes('graviton')) ||
+            (norm.includes('concentrad') && defNorm.includes('concentrad')) ||
+            (norm.includes('inclinad') && defNorm.includes('inclinad')) ||
+            (norm.includes('corda') && norm.includes('polia') && defNorm.includes('corda') && defNorm.includes('polia')) ||
+            (norm.includes('barra w') && defNorm.includes('barra w')) ||
+            (norm.includes('crucifixo') && norm.includes('invertid') && defNorm.includes('crucifixo')) ||
+            (norm.includes('articulad') && defNorm.includes('articulad')) ||
+            (norm.includes('puxada') && norm.includes('frontal') && defNorm.includes('frontal')) ||
+            (norm.includes('abduc') && norm.includes('horizontal') && defNorm.includes('abduc'))) {
+          matchedDef = def;
+          break;
+        }
+      }
+    }
+
+    if (matchedDef) {
+      handledDefaultIds.add(matchedDef.id);
+      merged.push({
+        ...matchedDef,
+        id: matchedDef.id,
+        name: uex.name || matchedDef.name,
+        category: matchedDef.category,
+        defaultWeight: uex.defaultWeight || matchedDef.defaultWeight,
+        sets: uex.sets || matchedDef.sets,
+        tip: uex.tip || matchedDef.tip,
+        caution: uex.caution || matchedDef.caution
+      });
+    } else {
+      merged.push(uex);
+    }
+  });
+
+  // Acrescenta exercícios padrão do plano de 5 dias que ainda não constem
+  DEFAULT_EXERCISES.forEach(def => {
+    if (!handledDefaultIds.has(def.id)) {
+      merged.push({ ...def });
+      handledDefaultIds.add(def.id);
+    }
+  });
+
+  return merged;
+}
+
 function loadFromStorage() {
   const savedExercises = localStorage.getItem('gym_exercises');
   if (savedExercises) {
-    appState.exercises = JSON.parse(savedExercises);
-    // Garantir que o exercício de abdução horizontal na polia exista se não foi adicionado ainda
-    const hasAbducao = appState.exercises.some(e => {
-      const n = (e.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-      return n.includes('abduc') && n.includes('horizontal');
-    });
-    if (!hasAbducao) {
-      const defaultAbducao = DEFAULT_EXERCISES.find(e => e.id === 'abducao_horizontal_ombro_polia');
-      if (defaultAbducao) {
-        appState.exercises.push(defaultAbducao);
-        saveToStorage('gym_exercises', appState.exercises);
+    try {
+      const parsed = JSON.parse(savedExercises);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        appState.exercises = mergeTo5DaySplit(parsed);
+      } else {
+        appState.exercises = [...DEFAULT_EXERCISES];
       }
+    } catch(e) {
+      appState.exercises = [...DEFAULT_EXERCISES];
     }
   } else {
-    appState.exercises = DEFAULT_EXERCISES;
-    saveToStorage('gym_exercises', appState.exercises);
+    appState.exercises = [...DEFAULT_EXERCISES];
   }
+  saveToStorage('gym_exercises', appState.exercises);
 
   const savedWeights = localStorage.getItem('gym_weights');
   if (savedWeights) appState.customWeights = JSON.parse(savedWeights);
@@ -555,18 +791,21 @@ function updateWorkoutSummary() {
   if (!summaryEl) return;
 
   const cat = appState.currentWorkoutCategory;
-  let title = "Treino A: Peito, Ombros e Tríceps";
-  let desc = "Foco em força de empurrar e definição de braços e peitoral.";
+  let title = "Treino A: Peitoral & Tríceps";
+  let desc = "Foco em força de empurrar, densidade peitoral e definição de tríceps.";
 
   if (cat === 'B') {
-    title = "Treino B: Costas, Ombros Posterior e Bíceps";
-    desc = "Foco em puxadas, espessura de costas e expansão de bíceps.";
+    title = "Treino B: Costas & Puxadas";
+    desc = "Foco em largura, espessura e força em puxadas e remadas.";
   } else if (cat === 'C') {
     title = "Treino C: Pernas Seguras & Abdômen (Core)";
     desc = "Exercícios adaptados 100% em máquinas seguras com apoio lombar total.";
   } else if (cat === 'D') {
-    title = "Treino D: Treino Extra Personalizado";
-    desc = "Seu treino personalizado com exercícios exclusivos.";
+    title = "Treino D: Ombros 3D & Postura";
+    desc = "Deltoides completo: anterior, lateral, posterior e trapézio na polia.";
+  } else if (cat === 'E') {
+    title = "Treino E: Braços Completos (Bíceps & Tríceps)";
+    desc = "Superfoco em bíceps isolado (banco inclinado, polia, barra W) e tríceps.";
   } else if (cat === 'ALL') {
     title = "Todos os Exercícios da Sua Rotina";
     desc = "Catálogo completo com cargas salvas e instruções ilustradas.";
@@ -1153,6 +1392,15 @@ function resetWorkoutCheckmarks() {
     appState.completedSets = {};
     saveToStorage('gym_completed_sets', {});
     renderExerciseList();
+  }
+}
+
+function resetToDefault5DayPlan() {
+  if (confirm("Deseja carregar a divisão completa de 5 Dias (ABCDE)?\n\nIsso reorganizará todos os 31 exercícios ilustrados nas categorias A (Peito/Tríceps), B (Costas/Puxadas), C (Pernas Adaptadas), D (Ombros 3D) e E (Braços Completos). Suas cargas personalizadas serão mantidas!")) {
+    appState.exercises = JSON.parse(JSON.stringify(DEFAULT_EXERCISES));
+    saveToStorage('gym_exercises', appState.exercises);
+    renderExerciseList();
+    alert("Rotina de 5 Dias (ABCDE) atualizada com sucesso!");
   }
 }
 
