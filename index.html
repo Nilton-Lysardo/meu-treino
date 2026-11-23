@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -47,19 +47,19 @@
       <div class="workout-selector">
         <button class="workout-tab-btn active" data-category="A" onclick="switchWorkoutTab('A')">
           <span class="tab-tag">Treino A</span>
-          <span class="tab-desc">Peito / Ombro / Tríceps</span>
+          <span class="tab-desc">Peito, Ombros & Abdômen</span>
         </button>
         <button class="workout-tab-btn" data-category="B" onclick="switchWorkoutTab('B')">
           <span class="tab-tag">Treino B</span>
-          <span class="tab-desc">Costas / Bíceps</span>
+          <span class="tab-desc">Costas, Trapézio & Posterior</span>
         </button>
         <button class="workout-tab-btn" data-category="C" onclick="switchWorkoutTab('C')">
           <span class="tab-tag">Treino C</span>
-          <span class="tab-desc">Pernas (Adaptado) / Core</span>
+          <span class="tab-desc">Pernas Seguras & Panturrilhas</span>
         </button>
         <button class="workout-tab-btn" data-category="D" onclick="switchWorkoutTab('D')">
           <span class="tab-tag">Treino D</span>
-          <span class="tab-desc">Personalizado</span>
+          <span class="tab-desc">Braços Completos (Bíceps & Tríceps)</span>
         </button>
         <button class="workout-tab-btn" data-category="ALL" onclick="switchWorkoutTab('ALL')">
           <span class="tab-tag">Todos</span>
@@ -70,10 +70,10 @@
       <!-- Barra de Ações Rápidas (Adicionar Exercício) -->
       <div class="action-banner-row">
         <button class="btn-primary-action" onclick="openExerciseFormModal()">
-          <span>➕ Adicionar Novo Exercício</span>
+          <span>+ Adicionar Novo Exercício</span>
         </button>
         <button class="btn-secondary-action" onclick="openGoalsModal()">
-          <span>⚙️ Metas</span>
+          <span>🎯 Metas</span>
         </button>
       </div>
 
@@ -173,7 +173,7 @@
         <div style="display:flex; justify-content:space-between; align-items:center;">
           <h2 style="font-size:1.2rem; font-weight:800;">Evolução de Peso Corporal</h2>
           <button class="btn-secondary-action" style="padding:6px 10px; font-size:0.75rem;" onclick="openGoalsModal()">
-            ⚙️ Alterar Metas
+            🎯 Alterar Metas
           </button>
         </div>
         <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">
@@ -244,17 +244,26 @@
           </p>
           <div style="display:flex; gap:8px;">
             <button class="btn-secondary-action" style="flex:1;" onclick="exportBackup()">
-              📥 Baixar Backup
+              ⬇️ Baixar Backup
             </button>
             <button class="btn-secondary-action" style="flex:1;" onclick="triggerImportBackup()">
-              📤 Restaurar Backup
+              ⬆️ Restaurar Backup
             </button>
             <input type="file" id="backup-file-input" style="display:none;" accept=".json" onchange="handleImportBackup(event)">
           </div>
         </div>
 
-        <div class="settings-section-card">
-          <div class="settings-section-title">📱 Dica de Atalho no Celular</div>
+                <div class="settings-section-card">
+          <div class="settings-section-title">🔄 Restaurar Treino Oficial (4 Dias)</div>
+          <p style="font-size:0.82rem; color:#CBD5E1; margin-bottom:12px; line-height:1.4;">
+            Restaura a divisão equilibrada oficial de 4 dias (A, B, C, D) com todos os 30 exercícios ilustrados e sem repetições no mesmo dia. Suas cargas salvas serão mantidas!
+          </p>
+          <button class="btn-secondary-action" style="width:100%; border-color:var(--accent-primary); color:var(--accent-primary);" onclick="resetToDefault4DayPlan()">
+            Carregar Divisão Oficial de 4 Dias (ABCD)
+          </button>
+        </div>
+<div class="settings-section-card">
+          <div class="settings-section-title">💡 Dica de Atalho no Celular</div>
           <p style="font-size:0.82rem; color:#CBD5E1; line-height:1.4;">
             Para ter o ícone na tela do seu celular, abra <code>https://nilton-lysardo.github.io/meu-treino/</code> no Chrome, toque nos 3 pontinhos e selecione <strong>"Instalar aplicativo"</strong> ou <strong>"Adicionar à tela inicial"</strong>.
           </p>
@@ -267,7 +276,7 @@
   <!-- MODAL 1: FORMULÁRIO DE ADICIONAR / EDITAR EXERCÍCIO -->
   <div class="modal-overlay" id="exercise-form-modal" onclick="closeExerciseFormModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close-btn" onclick="closeExerciseFormModal()">✕</button>
+      <button class="modal-close-btn" onclick="closeExerciseFormModal()">&times;</button>
       <h3 id="form-modal-title" style="font-size:1.15rem; font-weight:800; margin-bottom:14px; color:var(--accent-primary);"></h3>
       
       <form onsubmit="saveExerciseFromForm(event)">
@@ -282,10 +291,10 @@
           <div class="form-group">
             <label class="form-label">Treino</label>
             <select id="form-exercise-category" class="form-select">
-              <option value="A">Treino A (Peito / Ombro / Tríceps)</option>
-              <option value="B">Treino B (Costas / Bíceps)</option>
-              <option value="C">Treino C (Pernas / Core)</option>
-              <option value="D">Treino D (Personalizado)</option>
+              <option value="A">Treino A (Peitoral, Ombros & Abdômen)</option>
+              <option value="B">Treino B (Costas, Trapézio & Posterior)</option>
+              <option value="C">Treino C (Pernas Seguras & Panturrilhas)</option>
+              <option value="D">Treino D (Braços Completos - Bíceps & Tríceps)</option>
             </select>
           </div>
           <div class="form-group">
@@ -324,6 +333,7 @@
             <option value="peck_deck">Voador / Peck Deck</option>
             <option value="shoulder_press">Shoulder Press / Ombros</option>
             <option value="lateral_raise">Elevação Lateral</option>
+            <option value="abducao_horizontal_ombro_polia">Abdução Horizontal na Polia</option>
             <option value="lat_pulldown">Puxada Alta (Lat Pulldown)</option>
             <option value="seated_row">Remada Sentada</option>
             <option value="biceps_curl">Rosca Bíceps</option>
@@ -357,7 +367,7 @@
   <!-- MODAL 2: FORMULÁRIO DE METAS & PERFIL -->
   <div class="modal-overlay" id="goals-modal" onclick="closeGoalsModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close-btn" onclick="closeGoalsModal()">✕</button>
+      <button class="modal-close-btn" onclick="closeGoalsModal()">&times;</button>
       <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:14px; color:var(--accent-primary);">Personalizar Meus Objetivos</h3>
 
       <form onsubmit="saveGoalsFromForm(event)">
@@ -405,7 +415,7 @@
   <!-- MODAL 3: ZOOM DE DETALHES DO EXERCÍCIO -->
   <div class="modal-overlay" id="exercise-modal" onclick="closeExerciseModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
-      <button class="modal-close-btn" onclick="closeExerciseModal()">✕</button>
+      <button class="modal-close-btn" onclick="closeExerciseModal()">&times;</button>
       <h3 id="modal-title" style="font-size:1.15rem; font-weight:800; padding-right:30px;"></h3>
       <div class="modal-img-container" id="modal-img"></div>
       <div id="modal-desc"></div>
@@ -432,6 +442,6 @@
     </button>
   </nav>
 
-  <script src="app.js?v=3"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>

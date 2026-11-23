@@ -41,33 +41,48 @@ Para equilibrar o físico, deixar os ombros e braços mais densos e fortalecer a
 
 ---
 
-## 📅 3. Divisão de Treinos (ABC)
+## 📅 3. Divisão de Treinos em 4 Dias (Rotina ABCD Equilibrada)
 
-### Treino A: Peito, Ombros e Tríceps (Empurrar)
-- Supino Reto: 3x 8 a 10 reps (15kg)
-- Chest Press Máquina: 3x 10 a 12 reps (39kg)
-- Voador / Peck Deck: 3x 12 reps (65kg)
-- Shoulder Press Máquina: 3x 10 a 12 reps (24kg)
-- Elevação Lateral: 3x 12 a 15 reps *(Novo)*
-- Tríceps Máquina Sentado: 3x 10 a 12 reps (50kg)
-- Pulley Tríceps ou Tríceps Corda: 3x 12 reps (42kg a 45.5kg)
+Para potencializar os ganhos sem sobrecarregar as articulações e sem exercícios repetidos no mesmo dia, a rotina foi estruturada em 4 treinos balanceados (ex: Segunda, Terça, Quinta e Sexta):
 
-### Treino B: Costas, Ombros Posterior e Bíceps (Puxar)
-- Lat Pulldown Frontal: 3x 10 a 12 reps (40kg)
-- Remada Máquina / Seated Row: 3x 10 a 12 reps (45.5kg)
-- Iso-Lateral Lat Pulldown ou T-Bar Row: 3x 10 a 12 reps
-- Voador Invertido (Costas): 3x 12 a 15 reps (19.5kg)
-- High Pulley Ombros Máquina: 3x 12 reps (42kg)
-- Rosca Bíceps na Barra: 3x 10 a 12 reps (5kg/lado)
-- Rosca Martelo com halteres: 3x 10 a 12 reps *(Novo)*
+### Treino A: Peitoral, Deltoides (Anterior/Lateral) & Abdômen (Push & Core)
+- **Supino Reto na Barra / Halteres**: 3 a 4x 8 a 12 reps (15 kg cada lado)
+- **Chest Press na Máquina**: 3x 10 a 12 reps (35 kg)
+- **Voador / Peck Deck Máquina**: 3x 12 a 15 reps (30 kg)
+- **Elevação Ombro Máquina (Shoulder Press)**: 3x 10 a 12 reps (24 kg)
+- **Elevação Lateral (Halteres / Polia)**: 3 a 4x 12 a 15 reps (6 a 8 kg)
+- **Elevação Frontal na Polia Baixa**: 3x 12 reps (10 a 15 kg)
+- **Abdominal Máquina ou Crunch Solo**: 3 a 4x 15 a 20 reps (20 kg)
 
-### Treino C: Pernas Adaptadas & Abdômen (Core)
-- Leg Press 45° ou Horizontal: 3x 10 a 12 reps (26kg - movimento controlado)
-- Cadeira Extensora: 3x 12 a 15 reps *(Novo - carga suave)*
-- Cadeira Flexora Sentada: 3x 12 reps *(Novo)*
-- Cadeira Abdutora: 3x 15 reps *(Novo - foco em estabilidade)*
-- Panturrilha Sentado: 3x 15 reps *(Novo)*
-- Abdominal Máquina ou Crunch Solo: 3x 15 a 20 reps *(Novo)*
+### Treino B: Costas, Dorsais, Trapézio & Deltoides Posteriores (Pull Completo)
+- **Puxada Frontal na Polia (Lat Pulldown)**: 3 a 4x 10 a 12 reps (40 kg)
+- **Pulley Articulado (Puxada Convergente)**: 3 a 4x 10 a 12 reps (20 kg cada lado)
+- **Puxada no Graviton (Barra Fixa Assistida)**: 3x 8 a 10 reps (Plataforma ajustada)
+- **Remada Máquina Sentado**: 3x 10 a 12 reps (35 kg)
+- **T-Bar Row Cavalinho (Apoiado)**: 3x 10 reps (20 a 25 kg)
+- **Seated Row (Costas com Barra / Cabo)**: 3x 10 a 12 reps (35 kg)
+- **High Pulley Ombros Máquina (Trapézio)**: 3x 12 reps (25 kg)
+- **Crucifixo Invertido (Peck Deck Invertido)**: 3 a 4x 12 a 15 reps (20 a 25 kg)
+- **Abdução Horizontal de Ombro na Polia**: 3x 12 a 15 reps (5 a 10 kg)
+
+### Treino C: Pernas Completas (Adaptado & Seguro) & Panturrilhas
+> *Todas as opções possuem suporte lombar completo, ideais para segurança articular e motora.*
+- **Leg Press 45° ou Horizontal**: 3x 10 a 12 reps (30 kg)
+- **Cadeira Extensora (Foco Seguro)**: 3x 12 a 15 reps (20 kg)
+- **Cadeira Flexora Sentada (Posterior de Coxa)**: 3x 12 reps (20 kg)
+- **Cadeira Abdutora (Glúteos & Estabilidade de Marcha)**: 3x 15 reps (35 kg)
+- **Panturrilha Sentado na Máquina (Gêmeos)**: 3 a 4x 15 a 20 reps (20 kg)
+
+### Treino D: Braços Completos (Bíceps, Tríceps & Antebraço)
+> *Treino sinérgico alternando tríceps e bíceps em diferentes ângulos para máximo rendimento sem fadiga repetitiva.*
+- **Pulley Tríceps (Barra Reta / Cabo)**: 3x 10 a 12 reps (25 kg)
+- **Rosca com Barra W (Bíceps Anatômico)**: 3 a 4x 10 a 12 reps (7 a 10 kg cada lado)
+- **Tríceps Corda no Pulley**: 3x 12 a 15 reps (15 kg)
+- **Rosca com Halteres Inclinada no Banco (Cabeça Longa)**: 3x 10 a 12 reps (8 a 10 kg cada halter)
+- **Tríceps Máquina Sentado (Dip)**: 3x 10 a 12 reps (35 kg)
+- **Rosca Martelo com Halteres (Braquial e Antebraço)**: 3x 10 a 12 reps (8 a 10 kg cada lado)
+- **Rosca com Corda na Polia Baixa**: 3x 12 a 15 reps (15 a 20 kg)
+- **Rosca Concentrada com Halter Sentado (Pico de Contração)**: 3x 10 a 12 reps cada braço (8 a 10 kg)
 
 ---
 

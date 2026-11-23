@@ -27,9 +27,10 @@ Academia/
 
 ## 🚀 Principais Funcionalidades
 
-- **Divisão de Treinos:** Treino A (Peito, Ombros e Tríceps), Treino B (Costas e Bíceps), Treino C (Pernas Adaptadas e Core) e Treino D (Personalizado).
-- **Ilustrações Anatômicas:** Desenhos anatômicos em 3D com destaque visual nos músculos primários e secundários.
+- **Divisão de Treinos (4 Dias):** Treino A (Peitoral, Ombros & Abdômen), Treino B (Costas, Trapézio & Posterior), Treino C (Pernas Seguras & Panturrilhas) e Treino D (Braços Completos - Bíceps & Tríceps).
+- **Ilustrações Anatômicas Padronizadas:** 30 exercícios com desenhos anatômicos detalhados em alta definição e destaque muscular.
 - **Adaptação Biomecânica:** Exercícios de membros inferiores 100% em máquinas seguras com apoio total de coluna e estabilidade de quadril.
+- **Sem Repetições no Mesmo Dia:** Rotina sinérgica balanceada, eliminando sobreposições repetitivas de exercícios.
 - **Totalmente Personalizável:** Adicione novos exercícios, edite cargas, repetições, exclua ou crie treinos extras.
 - **Histórico e Metas:** Controle de evolução de peso corporal (69kg ➔ 75kg) e metas de macronutrientes.
 - **Cronômetro com Som e Vibração:** Temporizador de descanso entre séries.
